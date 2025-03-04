@@ -8,7 +8,11 @@ variable "instance_type" {
   default     = "t2.micro"
 }
 
-variable "key_name" {
-  default     = "sample-app-key-name"
-  description = "AWS Key Pair name to access the instance"
+variable "private_key" {
+  description = "The private key to access the EC2 instance"
+  sensitive   = true
+}
+
+variable "public_key" {
+  description = "The public key for the EC2 instance"
 }
